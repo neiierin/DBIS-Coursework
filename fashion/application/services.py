@@ -1,0 +1,29 @@
+#сервіси
+
+#BrandInformationService
+# CRUD брендів
+...
+#DesignerInformationService
+# CRUD дизайнерів
+...
+#CollectionInformationService
+# CRUD колекцій + фільтрація (сезон, рік, стиль)
+...
+#GarmentInformationService
+# CRUD моделей одягу
+...
+#CollaborationService
+# головний дизайнер бренду, колаборації дизайнера
+...
+#BrandRecommendationService
+# схожі бренди за стилістикою, речі з тієї ж колекції
+...
+#FullTextSearchService
+# повнотекстовий пошук (концепції, прес-релізи, біографії)
+...
+#SearchCacheService
+# кешування пошукових запитів
+...
+#DataGenerationService
+# запис згенерованих даних у Mongo + скидання кешу
+...
