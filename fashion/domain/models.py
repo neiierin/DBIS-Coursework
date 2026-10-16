@@ -1,17 +1,41 @@
-# Доменні моделі (поки флет)
+# Доменні моделі
+from dataclasses import dataclass, field
+from uuid import UUID
 
 # Designer
-# поля: id, name, biography, style
-...
+@dataclass
+class Designer:
+    id: UUID
+    name: str
+    biography: str
+    style: str
 
 # Brand
-# поля: id, name, head_designer_id, style_category
-...
+@dataclass
+class Brand:
+    id: UUID
+    name: str
+    head_designer_id: UUID
+    style_category: str
 
 # Collection
-# поля: id, title, season, year, concept_description, press_release, video_url, brand_id, designer_ids
-...
+@dataclass
+class Collection:
+    id: UUID
+    title: str
+    season: str
+    year: int
+    concept_description: str
+    press_release: str
+    video_url: str
+    brand_id: UUID
+    designer_ids: list[UUID] = field(default_factory=list)
 
 # Garment
-# поля: id, collection_id, type, name, material
-...
+@dataclass
+class Garment:
+    id: UUID
+    collection_id: UUID
+    type: str
+    name: str
+    material: str

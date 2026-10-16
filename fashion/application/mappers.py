@@ -1,12 +1,31 @@
+from fashion.domain import models as m
+from fashion.application import dto as d
+
+
 #DesignerMapper
-# to_dto, to_entity
-...
+class DesignerMapper:
+    @staticmethod
+    def to_dto(entity: m.Designer) -> d.DesignerDto: ...
+    @staticmethod
+    def to_entity(dto: d.DesignerCreateDto) -> m.Designer: ...
+
 #BrandMapper
-# to_dto, to_entity
-...
+class BrandMapper:
+    @staticmethod
+    def to_dto(entity: m.Brand) -> d.BrandDto: ...
+    @staticmethod
+    def to_entity(dto: d.BrandCreateDto) -> m.Brand: ...
+
 #CollectionMapper
-# to_dto, to_entity
-...
+class CollectionMapper:
+    @staticmethod
+    def to_dto(entity: m.Collection) -> d.CollectionDto: ...
+    @staticmethod
+    def to_entity(dto: d.CollectionCreateDto) -> m.Collection: ...
+
 #GarmentMapper
-# to_dto, to_entity
-...
+class GarmentMapper:
+    @staticmethod
+    def to_dto(entity: m.Garment) -> d.GarmentDto: ...
+    @staticmethod
+    def to_entity(dto: d.GarmentCreateDto) -> m.Garment: ...
